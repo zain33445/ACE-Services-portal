@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   distDir: process.env.NODE_ENV === 'development' ? '.next-dev' : '.next',
+  output: 'standalone',
   
   // Performance optimizations
   compress: true,
@@ -44,7 +45,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:4000/api/:path*',
+        destination: `${process.env.INTERNAL_API_URL || 'http://localhost:4000'}/api/:path*`,
       },
     ];
   },

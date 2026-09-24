@@ -1,0 +1,8 @@
+**/node_modules
+apps/api/uploads
+apps/api/demo-uploads
+apps/web/.next
+apps/web/.next-dev
+.git
+*.md
+scratch
